@@ -26,7 +26,7 @@
  vlan 2 name Vlan2  
  
  ## router rip  
-    : network 192.168.10.0  
+    network 192.168.10.0  
 
  ## router ospf <process_Id>  
     ex: router ospf 10  
