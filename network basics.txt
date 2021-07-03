@@ -1,0 +1,137 @@
+router : 
+ -network layer 3 (network)
+ -wifi and ethernet
+ -single network distributes the ip 
+ -A router works by connecting a network to another network via a modem.
+ The router will normally be found at the gateway to the network and perform 
+ the function of routing or passing on data packets along the network. 
+ Since data packets contain the destination IP addresses of where they are 
+ headed, this enables routers and modems to communicate with each other using 
+ ICMP (Internet Control Message Protocol) to determine the most efficient path 
+ for transmitting data packets over the network to their destination point. 
+
+switch: 
+ -layer 2 (data link)
+ -ethernet only
+ -merges multiple networks
+ -While switches don't have inherent network protection built in, a router will 
+ -often have hardware-based firewall protection that is individually configurable 
+ -to your individual office or home network to give optimum connectivity.
+ -While a network switch can connect multiple devices and networks to expand the LAN, 
+  a router will allow you to share a single IP address among multiple network devices. 
+  In simpler terms, the Ethernet switch creates networks and the router allows for 
+  connections between networks. 
+
+
+wireless controller(WLAN):
+ - physical and data link layer
+ 
+ -Access point:
+  An access point is the device that allows multiple wireless devices to connect with each other. 
+  Just like a HUB or switch connects multiple devices together in a single or multiple wired LAN networks, 
+  an access point connects multiple wireless devices together in a single wireless or multiple wireless networks. 
+  An access point can also be used to extend the wired network to the wireless devices.
+
+ -A controlled access point works as the client of the Wireless LAN Controller (WLC). 
+  Technically a controlled access point is known as the Lightweight Access Point (LWAP). 
+  LWAP doesn’t take any forwarding decision. Upon receiving a frame from the connected device, 
+  instead of forwarding it to the destination device, it forwards that frame to the WLC. The WLC, 
+  based on the security configuration, makes decision whether the received frame should be forwarded
+  or discarded. If the frame needs to be forwarded, then it sends that frame to that LWAP, to which 
+  the destination device is connected. Then that LWAP sends this frame to the destination device.
+
+vlan:
+
+ - A VLAN (virtual LAN) is a subnetwork which can group together collections of devices on separate physical 
+   local area networks (LANs).
+ - VLANs make it easy for network administrators to partition a single switched network to match the functional 
+   and security requirements of their systems without having to run new cables or make major changes in their 
+   current network infrastructure.
+ - VLANs are also important because they can help improve the overall performance of a network by grouping together 
+   devices that communicate most frequently. VLANs also provide security on larger networks by allowing a higher 
+   degree of control over which devices have access to each other. 
+ - How VLAN works:
+     Ports (interfaces) on switches can be assigned to one or more VLANs, enabling systems to be divided into logical 
+     groups -- based on which department they are associated with -- and establish rules about how systems in the 
+     separate groups are allowed to communicate with each other. These groups can range from the simple and practical 
+     (computers in one VLAN can see the printer on that VLAN, but computers outside that VLAN cannot), to the complex 
+     and legal (for example, computers in the retail banking departments cannot interact with computers in the trading departments).
+
+Class	Ist octet Decimal Range	 Default subnet mask
+A	1 to 126	         255.0.0.0     
+B	128 to 191	         255.255.0.0
+C	192 to 223	         255.255.255.0
+D	224 to 239	
+    
+  The class ‘A’ Address ranging from 127.0.0.0 to 127.255.255.255 cannot be used and is reserved for loopback and diagnostic functions. 
+  The numbers of hosts which can be connected to this network are greater than 65536 hosts.
+  The number of hosts connected within the class B networks is from 256 to 65534 hosts.
+  The number of hosts connected within the class C network is less than 254 hosts. Therefore the class C network mask is perfect for the 
+  minor networks which are known as subnetworks. We utilize the bits from the last octet of class C for constructing mask. Thus we need to 
+  rearrange and optimize the subnet depending upon the availability of the bits.
+
+  Below table will show the masks that can be drawn on with Class C networks.
+  
+  Subnet Mask     Last octet binary Value  No. of hosts connected
+255.255.255.128   10000000                 126
+255.255.255.192   11000000                 62
+255.255.255.224   11100000                 30
+255.255.255.240   11110000                 14
+255.255.255.248	  11111000                  6
+255.255.255.252	  11111100                  2
+
+ major vendors of networking hardware:
+  Cisco:
+    2900, 4300 series routers.
+    2960, 3750, 3650, 3850 series switches.
+ Juniper Networks:
+    EX2200. that is ex2000 series switches
+    EX2300. 
+    MX5 that is mx series routers
+    MX10
+    MX40
+    MX80
+ HPE:
+    HP 2920-24G Switch J9726A.
+    HP 2510-48 Switch J9020A. ...
+    HPE 2520-8-PoE Switch J9137A.
+  Arista. 
+
+cli commands:
+ en 
+ config t
+ interface FastEthernet 0/2
+ shutdown
+ no shutdown
+ ip address 192.168.10.1 255.255.255.0
+ ip route 0.0.0.0 0.0.0.0 192.168.10.1(setting default gateway on router)
+ ip route <destination network ex: 192.168.10.0><subnet mask><next hop interface> (mannual routing for each interface)
+ no <command to remove fromt mannual route>
+ spanning-tree portfast
+ spanning-tree vlan 1 priority 0
+ spanning-tree bpduguard enable/disable(after disabling shut and no shut to restart)
+ switchport mode trunk (specifies assigning mulitple vlan to same port)
+ switchport mode access(specifying that assigning one vlan to one port)
+ switchport access vlan 1 (assigning vlan to port with access enabled)
+ spanning-tree mode pvst
+ sh span 
+ show arp
+ show run 
+ show start
+ show ip route
+ vlan 2
+ exit
+ vlan database
+ vlan 2 name Vlan2
+ 
+ router rip
+ network 192.168.10.0
+
+ router ospf <process_Id>
+    ex: router ospf 10
+ network <network= 192.168.10.0> <wildcard mask = 0.0.0.255> area <area_No>
+     ex : network 192.168.10.0 0.0.0.255 area 1
+
+	
+ 
+
