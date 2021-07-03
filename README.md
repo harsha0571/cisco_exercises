@@ -31,4 +31,4 @@
  ## router ospf <process_Id>  
     ex: router ospf 10  
  network <network= 192.168.10.0> <wildcard mask = 0.0.0.255> area <area_No>  
-     ex : network 192.168.10.0 0.0.0.255 area 1  
+    ex : network 192.168.10.0 0.0.0.255 area 1  
