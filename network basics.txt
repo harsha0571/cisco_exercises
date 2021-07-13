@@ -80,22 +80,7 @@ D	224 to 239
 255.255.255.248	  11111000                  6
 255.255.255.252	  11111100                  2
 
- major vendors of networking hardware:
-  Cisco:
-    2900, 4300 series routers.
-    2960, 3750, 3650, 3850 series switches.
- Juniper Networks:
-    EX2200. that is ex2000 series switches
-    EX2300. 
-    MX5 that is mx series routers
-    MX10
-    MX40
-    MX80
- HPE:
-    HP 2920-24G Switch J9726A.
-    HP 2510-48 Switch J9020A. ...
-    HPE 2520-8-PoE Switch J9137A.
-  Arista. 
+ 
 
 cli commands:
  en 
