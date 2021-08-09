@@ -58,10 +58,10 @@ vlan:
      and legal (for example, computers in the retail banking departments cannot interact with computers in the trading departments).
 
 Class	Ist octet Decimal Range	 Default subnet mask
-A	1 to 126	         255.0.0.0     
-B	128 to 191	         255.255.0.0
-C	192 to 223	         255.255.255.0
-D	224 to 239	
+  A	1 to 126	           255.0.0.0     
+  B	128 to 191	         255.255.0.0
+  C	192 to 223	         255.255.255.0
+  D	224 to 239	
     
   The class ‘A’ Address ranging from 127.0.0.0 to 127.255.255.255 cannot be used and is reserved for loopback and diagnostic functions. 
   The numbers of hosts which can be connected to this network are greater than 65536 hosts.
@@ -72,13 +72,13 @@ D	224 to 239
 
   Below table will show the masks that can be drawn on with Class C networks.
   
-  Subnet Mask     Last octet binary Value  No. of hosts connected
-255.255.255.128   10000000                 126
-255.255.255.192   11000000                 62
-255.255.255.224   11100000                 30
-255.255.255.240   11110000                 14
-255.255.255.248	  11111000                  6
-255.255.255.252	  11111100                  2
+  Subnet Mask        Last octet binary Value  No. of hosts connected
+  255.255.255.128     10000000                 126
+  255.255.255.192     11000000                 62
+  255.255.255.224     11100000                 30
+  255.255.255.240     11110000                 14
+  255.255.255.248	    11111000                  6
+  255.255.255.252	    11111100                  2
 
  
 
