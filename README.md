@@ -83,7 +83,7 @@
     ex: ip nat inside source list 1 pool lab
     debug ip nat (to see packets live and debug)
      
-## router on a stick 
+## Router on a Stick 
     first create vlans,
     vlan 2 , vlan 3 , vlan 4 ....
     
