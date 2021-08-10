@@ -1,5 +1,6 @@
 # CLI commands:
  
+## Basic commands 
  >en  
  config t  
  no command  (to undo that command )  
@@ -17,7 +18,7 @@
  vlan database  
  
   
-## show commands 
+## Show commands 
  >sh span   
  show arp  
  show run    
@@ -42,21 +43,21 @@
  
  ## Static routing 
  
-    ip route <destination network ex: 192.168.10.0>(subnet mask ex: 255.255.255.0)(next hop interface) 
-    (mannual  routing for each interface)  
+>ip route <destination network ex: 192.168.10.0>(subnet mask ex: 255.255.255.0)(next hop interface) 
+(mannual  routing for each interface)  
  
  
  
  
  ## RIP(Routing information protocol )
-    router rip 
-    network 192.168.10.0  
+   >router rip  
+   network 192.168.10.0  
 
  ## OSPF(Open Shortest Path First)
-    router ospf <process_Id>  
-    ex: router ospf 10  
-    network <network= 192.168.10.0> <wildcard mask = 0.0.0.255> area <area_No>  
-    ex : network 192.168.10.0 0.0.0.255 area 1  
+> router ospf <process_Id>  
+   ex: router ospf 10  
+   network <network= 192.168.10.0> [wildcard mask = 0.0.0.255] area <area_No>  
+   ex : network 192.168.10.0 0.0.0.255 area 1  
 
 
   ## NAT( network address translation)
@@ -105,7 +106,7 @@
 
  ## STANDARD ACCESS LIST 
  
- ( limited flexibility closer to destination rather than source ... teacher over student if student is being restricted from accessing teacher network)
+   Limited flexibility closer to destination rather than source ... teacher over student if student is being restricted from accessing teacher network
  
     access-list 10 (upto 99 is standard above is extended list)
     acesss-list NO deny/permit source destination 
