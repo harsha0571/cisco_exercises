@@ -105,7 +105,7 @@ ip add 192.169.10.1 255.255.255.0
 
  ## STANDARD ACCESS LIST 
  
-   Limited flexibility closer to destination rather than source ... teacher over student if student is being restricted from accessing teacher network
+Limited flexibility closer to destination rather than source ... teacher over student if student is being restricted from accessing teacher network
  
 >access-list 10 (upto 99 is standard above is extended list)  
 acesss-list list_no deny/permit source destination   
