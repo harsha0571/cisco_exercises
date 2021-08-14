@@ -130,10 +130,34 @@ then,
 snmp-server community public ro (read only)
 snmp-server community private rw (read write)
 
- ## NTP SERVER 
+## NTP SERVER 
 >show clock 
 ntp server {ip of server providing ntp service}
 ex: ntp server 192.168.12.2
 
+## Cisco discovery protocol (cdp)
+Layer 2 protocol discovery for cisco devices
+>show cdp neighbors detail 
 
+## Link layer discovery protocol (lldp)
+Vendor independent link discovery  
+First disable cdp, 
+> no cdp run  
+  lldp run  
+  show lldp neighbors detail
+
+## Link aggreation control protocol (lacp)
+Aggreation is the combining of several links to  
+act as a single connection
+> interface range fastEthernet 0/1-2   
+  switchport mode trunk   
+  channel-group group_no mode active  
+  ex: channel-group 1 mode active  
+
+  Only two devices can have common port-channel,
+> interface port-channel 1  
+  switchport mode trunk  
+  show etherchannel summary  
+  show etherchannel load-balance  
  
+
