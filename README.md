@@ -131,8 +131,8 @@ snmp-server community public ro (read only)
 snmp-server community private rw (read write)
 
 ## NTP SERVER 
->show clock 
-ntp server {ip of server providing ntp service}
+>show clock   
+ntp server {ip of server providing ntp service}  
 ex: ntp server 192.168.12.2
 
 ## Cisco discovery protocol (cdp)
@@ -160,4 +160,9 @@ act as a single connection
   show etherchannel summary  
   show etherchannel load-balance  
  
-
+ ## wlan 
+ In config panel,  
+ configure management , dhcp and Wireless Lans  
+ then power on the access point by draging the power adapter to   the port   
+ then enable dhcp on the access point   
+ on laptop power off take out ethernet module and replace with wireless module and connect 
