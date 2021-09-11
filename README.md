@@ -19,13 +19,14 @@ vlan database
 ## Show commands 
 >sh span   
 show arp  
-show run    
+show run  (press space to navigate)  
 show start  
 show ip route  (seeing ospf and rip routes)   
 sh ip nat translations  
 sh int trunk   
 sh vlan brief   
 sh ip int brief  
+sh ipv6 route
 
  ## Bpdugurad and portfast  
  
@@ -160,9 +161,22 @@ act as a single connection
   show etherchannel summary  
   show etherchannel load-balance  
  
- ## wlan 
+ ## Wlan controllers
  >In config panel,  
  configure management , dhcp and Wireless Lans  
  then power on the access point by draging the power adapter to   the port   
  then enable dhcp on the access point   
  on laptop power off take out ethernet module and replace with wireless module and connect using the predefined passphrase 
+
+ ## IPv6 Routing 
+ Setting up the ipv6 addresses
+
+ > ipv6 address examples for say 2001:1 is 2001:1::1 and 2001:1::2 and so on   
+ ipv6 address 2001:1::1/64  
+ ping ipv6 \<address\>  
+
+Setting up the routing 
+
+ >ipv6 unicast-routing   
+ ipv6 router rip \<name\>   
+ #int ipv6 rip \<name\> enable 
