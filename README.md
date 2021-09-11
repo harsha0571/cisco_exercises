@@ -161,8 +161,8 @@ act as a single connection
   show etherchannel load-balance  
  
  ## wlan 
- In config panel,  
+ >In config panel,  
  configure management , dhcp and Wireless Lans  
  then power on the access point by draging the power adapter to   the port   
  then enable dhcp on the access point   
- on laptop power off take out ethernet module and replace with wireless module and connect 
+ on laptop power off take out ethernet module and replace with wireless module and connect using the predefined passphrase 
